@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary-bg: #FAF6F2;
+  --accent: #D6A79B;
+  --text-color: #3C3C3C;
+  --input-bg: #ffffff;
+  --input-border: #DDD;
+  --btn-bg: #D6A79B;
+  --btn-text: #fff;
+  --sidebarBg: #f3e4e1;
+  --bg: #F6F6FA;
+  --txt: #333;
+  --font-main: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg);
+  display: flex;
+  min-height: 100vh;
+  color: var(--text-color);
+}
+
+/* === Login Page === */
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.left-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.left-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+#storeDesc {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+form {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  background-color: var(--input-bg);
+  font-size: 1rem;
+}
+
+button {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c28b7d;
+}
+
+.right-section {
+  width: 50%;
+  background: url('images/aura11.jpg') center center / cover no-repeat;
+}
+
+.sign {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #555;
+}
+
+.sign .link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sign .link:hover {
+  text-decoration: underline;
+}
+
+.logo-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+/* === Product Page === */
+.sidebar {
+  width: 240px;
+  background: var(--sidebarBg);
+  padding: 1.6rem 1rem;
+  border-inline-end: 1px solid #e6e6ee;
+}
+
+.logo {
+  color:black;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.cat {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cat li {
+  padding: 0.55rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--txt);
+  transition: 0.2s;
+  user-select: none;
+}
+
+.cat li.active,
+.cat li:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.top h2 {
+  font-size: 1.35rem;
+  color: var(--txt);
+}
+
+.search {
+  position: relative;
+  max-width: 260px;
+}
+
+.search input {
+  width: 100%;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#catDesc {
+  margin-bottom: 1.4rem;
+  color: #555;
+  font-size: 0.95rem;
+  min-height: 1.8rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.card h4 {
+  padding: 0.7rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right-section {
+    display: none;
+  }
+
+  .left-section {
+    width: 100%;
+  }
+}
